@@ -21,3 +21,4 @@ exports.getAllEmployee = asyncHandler(async (req, res) => {
     const result = await Employee.find()
     res.json({ message: "employee fetch success", result })
 })
+
