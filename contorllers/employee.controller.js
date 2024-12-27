@@ -15,6 +15,6 @@ exports.compleTodo = asyncHandler(async (req, res) => {
     //                                          👇middleware
     const output = await Todo.find({ employee: req.employee })
 
-    const result = output.filter(item => isComplete == true)
+    const result = output.filter(item => item.isComplete == true)
     res.json({ message: "todo fetch success", result })
 })
